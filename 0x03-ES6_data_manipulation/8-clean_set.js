@@ -7,5 +7,5 @@ export default function cleanSet(set, startString) {
     .filter((value) => value.startsWith(startString))
     .map((value) => value.slice(startString.length));
 
-  return result.join('-');
+    return result.length > 0 ? result.join('-') : '';
 }
