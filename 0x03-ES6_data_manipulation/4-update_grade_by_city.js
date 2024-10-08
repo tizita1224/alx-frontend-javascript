@@ -6,8 +6,8 @@ export default function updateStudentGradeByCity(arr, city, newGrades) {
     const mapIt = filterIt.map(studsInSan => {
         const grades = newGrades.find(GRADE => GRADE.studentId === studsInSan.id );
         return {
-            ...studsInSan, grade: grades ? grades.grade : 'N/A'
+            ...studsInSan, grade: grades ? grades.GRADE : 'N/A'
         };
-
     })
+    return mapIt;
 }
